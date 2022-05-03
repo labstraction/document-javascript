@@ -72,6 +72,18 @@ const studente6 = {
   voti: [9, 8, 7, 6],
 };
 
+
+const todo = {
+  name: "pane",
+  priority: 6
+}
+
+const auto1 = {
+  modello: "panda",
+  cilindrata: 1000,
+  produttore: 'fiat'
+};
+
 // const studente2 = ['Paolo', 'Foppiano', 24, false];
 
 const studenti = [
@@ -185,4 +197,30 @@ function createStudentsListHtml(studentsArray){
       container.appendChild(li);
     }
 
+}
+
+
+
+///////////////////////INNER HTML
+
+
+function logInnerHtml(){
+  const exampleDiv = document.getElementById("innerhtml-example");
+  console.log(exampleDiv.innerHTML);
+}
+
+function clearInnerHtml() {
+  const exampleDiv = document.getElementById("innerhtml-example");
+  exampleDiv.innerHTML = '';
+}
+
+function replaceInnerHtml() {
+  const exampleDiv = document.getElementById("innerhtml-example");
+  // exampleDiv.innerHTML = "";
+  // const p = document.createElement('p');
+  // const node = document.createTextNode('ciao sono il sostituto del lorem ipsum')
+  // p.appendChild(node);
+  // exampleDiv.appendChild(p);
+  const newHTMLString = "<p>ciao sono il sostituto del lorem ipsum</p>";
+  exampleDiv.innerHTML = newHTMLString;
 }
